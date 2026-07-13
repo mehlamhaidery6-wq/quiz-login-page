@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Login Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Animated Background Blobs -->
+
+    <div class="blob blob1"></div>
+
+    <div class="blob blob2"></div>
+
+    <div class="blob blob3"></div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <div class="login-card">
+
+            <h1>Quiz Login Page</h1>
+
+            <p>Enter your details to start the quiz.</p>
+
+            <form id="loginForm">
+
+                <!-- Username -->
+
+                <div class="inputBox">
+
+                    <input type="text" id="username" required>
+
+                    <label>Username</label>
+
+                </div>
+
+                <!-- Gmail -->
+
+                <div class="inputBox">
+
+                    <input type="email" id="gmail" required>
+
+                    <label>Gmail Address</label>
+
+                </div>
+
+                <!-- Quiz Passcode -->
+
+                <div class="inputBox">
+
+                    <input type="password" id="quizPasscode" required>
+
+                    <label>Quiz Passcode</label>
+
+                    <span id="togglePassword">👁️</span>
+
+                </div>
+
+                <!-- Phone Number -->
+
+                <div class="inputBox">
+
+                    <input type="tel"
+                        id="phone"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        required>
+
+                    <label>Phone Number</label>
+
+                </div>
+
+                <!-- Submit Button -->
+
+                <button type="submit">
+
+                    Continue to Quiz
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

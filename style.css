@@ -1,0 +1,523 @@
+/* ==========================
+   GOOGLE FONT & RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+
+    background: linear-gradient(
+        -45deg,
+        #4158D0,
+        #6C63FF,
+        #C850C0,
+        #FF6B81,
+        #00DBDE
+    );
+
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* Animated Background */
+
+@keyframes gradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.container {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    position: relative;
+    z-index: 2;
+
+}
+
+/* ==========================
+   LOGIN CARD
+========================== */
+
+.login-card {
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 40px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
+    transition: 0.4s;
+
+}
+
+.login-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.login-card h1 {
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+.login-card p {
+
+    color: rgba(255,255,255,0.9);
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    font-size: 15px;
+
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.inputBox {
+
+    position: relative;
+
+    margin-bottom: 28px;
+
+}
+
+.inputBox input {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.18);
+
+    color: white;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+.inputBox input:focus {
+
+    background: rgba(255,255,255,0.25);
+
+    box-shadow: 0 0 18px rgba(255,255,255,0.25);
+
+}
+
+/* Placeholder */
+
+.inputBox input::placeholder {
+
+    color: transparent;
+
+}
+
+/* Floating Label */
+
+.inputBox label {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 18px;
+
+    color: white;
+
+    transition: 0.3s;
+
+    pointer-events: none;
+
+}
+
+.inputBox input:focus + label,
+.inputBox input:valid + label {
+
+    top: -10px;
+
+    left: 14px;
+
+    background: white;
+
+    color: #333;
+
+    font-size: 12px;
+
+    padding: 2px 8px;
+
+    border-radius: 10px;
+
+}
+
+/* ==========================
+   PASSCODE ICON
+========================== */
+
+#togglePassword {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 15px;
+
+    color: white;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    font-size: 18px;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: white;
+
+    background: linear-gradient(45deg,#00DBDE,#FC00FF);
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 25px rgba(0,219,222,.6);
+
+}
+
+/* ==========================
+   FLOATING BLOBS
+========================== */
+
+.blob {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(55px);
+
+    opacity: .45;
+
+    animation: float 12s ease-in-out infinite alternate;
+
+}
+
+/* Blob 1 */
+
+.blob1 {
+
+    width: 250px;
+    height: 250px;
+
+    background: #ff00ff;
+
+    top: -80px;
+    left: -80px;
+
+}
+
+/* Blob 2 */
+
+.blob2 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #00ffff;
+
+    bottom: -120px;
+    right: -120px;
+
+    animation-duration: 10s;
+
+}
+
+/* Blob 3 */
+
+.blob3 {
+
+    width: 180px;
+    height: 180px;
+
+    background: #FFD93D;
+
+    top: 65%;
+    left: 10%;
+
+    animation-duration: 8s;
+
+}
+
+@keyframes float {
+
+    from {
+
+        transform: translate(-20px,-20px);
+
+    }
+
+    to {
+
+        transform: translate(40px,40px);
+
+    }
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+    .login-card {
+
+        max-width: 450px;
+
+        padding: 35px;
+
+    }
+
+    .login-card h1 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        padding: 15px;
+
+    }
+
+    .login-card {
+
+        width: 100%;
+
+        padding: 25px;
+
+        border-radius: 18px;
+
+    }
+
+    .login-card h1 {
+
+        font-size: 26px;
+
+    }
+
+    .login-card p {
+
+        font-size: 14px;
+
+    }
+
+    .inputBox {
+
+        margin-bottom: 22px;
+
+    }
+
+    .inputBox input {
+
+        font-size: 15px;
+
+        padding: 14px;
+
+    }
+
+    button {
+
+        padding: 15px;
+
+        font-size: 16px;
+
+    }
+
+    #togglePassword {
+
+        top: 14px;
+        right: 15px;
+
+    }
+
+}
+
+/* ==========================
+   VERY SMALL PHONES
+========================== */
+
+@media (max-width: 360px) {
+
+    .login-card {
+
+        padding: 20px;
+
+    }
+
+    .login-card h1 {
+
+        font-size: 22px;
+
+    }
+
+    .login-card p {
+
+        font-size: 13px;
+
+    }
+
+    .inputBox input {
+
+        font-size: 14px;
+
+    }
+
+    button {
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* ==========================
+   LARGE SCREENS
+========================== */
+
+@media (min-width: 1400px) {
+
+    .login-card {
+
+        max-width: 480px;
+
+    }
+
+    .login-card h1 {
+
+        font-size: 38px;
+
+    }
+
+    .login-card p {
+
+        font-size: 17px;
+
+    }
+
+    .inputBox input {
+
+        font-size: 17px;
+
+    }
+
+    button {
+
+        font-size: 18px;
+
+    }
+
+}
