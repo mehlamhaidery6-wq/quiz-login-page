@@ -5,41 +5,70 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Quiz Login Page</title>
+    <title>Cyber Security Quiz Portal</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="style.css">
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- Animated Background Blobs -->
+    <!-- ===============================
+         BACKGROUND VIDEO
+    ================================ -->
 
-    <div class="blob blob1"></div>
+    <video autoplay muted loop playsinline id="bg-video">
 
-    <div class="blob blob2"></div>
+        <source src="videos/cyber-bg.mp4"
+                type="video/mp4">
 
-    <div class="blob blob3"></div>
+    </video>
 
-    <!-- Main Container -->
+    <!-- Dark Overlay -->
+
+    <div class="overlay"></div>
+
+    <!-- ===============================
+         LOGIN CONTAINER
+    ================================ -->
 
     <div class="container">
 
         <div class="login-card">
 
-            <h1>Quiz Login Page</h1>
+            <!-- Shield Logo -->
 
-            <p>Enter your details to start the quiz.</p>
+            <div class="logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <!-- Heading -->
+
+            <h1>CYBER SECURITY QUIZ</h1>
+
+            <p id="typing-text">
+
+                Secure Authentication Required
+
+            </p>
+
+            <!-- Login Form -->
 
             <form id="loginForm">
 
@@ -47,7 +76,12 @@
 
                 <div class="inputBox">
 
-                    <input type="text" id="username" required>
+                    <i class="fa-solid fa-user"></i>
+
+                    <input type="text"
+                           id="username"
+                           placeholder=" "
+                           required>
 
                     <label>Username</label>
 
@@ -57,7 +91,12 @@
 
                 <div class="inputBox">
 
-                    <input type="email" id="gmail" required>
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input type="email"
+                           id="gmail"
+                           placeholder=" "
+                           required>
 
                     <label>Gmail Address</label>
 
@@ -67,37 +106,60 @@
 
                 <div class="inputBox">
 
-                    <input type="password" id="quizPasscode" required>
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input type="password"
+                           id="quizPasscode"
+                           placeholder=" "
+                           required>
 
                     <label>Quiz Passcode</label>
 
-                    <span id="togglePassword">👁️</span>
+                    <span id="togglePassword">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </span>
 
                 </div>
 
-                <!-- Phone Number -->
+                <!-- Phone -->
 
                 <div class="inputBox">
 
+                    <i class="fa-solid fa-phone"></i>
+
                     <input type="tel"
-                        id="phone"
-                        maxlength="10"
-                        pattern="[0-9]{10}"
-                        required>
+                           id="phone"
+                           maxlength="10"
+                           placeholder=" "
+                           required>
 
                     <label>Phone Number</label>
 
                 </div>
 
-                <!-- Submit Button -->
+                <!-- Login Button -->
 
                 <button type="submit">
 
-                    Continue to Quiz
+                    <i class="fa-solid fa-shield"></i>
+
+                    ACCESS QUIZ
 
                 </button>
 
             </form>
+
+            <!-- Footer -->
+
+            <div class="footer">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Secure Connection • Powered by Firebase
+
+            </div>
 
         </div>
 
@@ -105,7 +167,8 @@
 
     <!-- JavaScript -->
 
-    <script type="module" src="script.js"></script>
+    <script type="module"
+            src="script.js"></script>
 
 </body>
 
