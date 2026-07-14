@@ -32,9 +32,9 @@
     ================================ -->
 
     <video autoplay muted loop playsinline id="bg-video">
-    <source src="cyber-bg.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+        <source src="cyber-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <!-- Dark Overlay -->
 
@@ -100,7 +100,7 @@
 
                 </div>
 
-                <!-- Quiz Passcode -->
+                <!-- Password -->
 
                 <div class="inputBox">
 
@@ -109,9 +109,10 @@
                     <input type="password"
                            id="quizPasscode"
                            placeholder=" "
+                           minlength="8"
                            required>
 
-                    <label>Quiz Passcode</label>
+                    <label>Password</label>
 
                     <span id="togglePassword">
 
@@ -120,6 +121,12 @@
                     </span>
 
                 </div>
+
+                <!-- Password Message -->
+
+                <small class="password-note">
+                    Password should contain at least 8 characters.
+                </small>
 
                 <!-- Phone -->
 

@@ -180,7 +180,7 @@ function validatePasscode() {
 
     if (value === "") {
 
-        alert("❌ Quiz Passcode is required.");
+        alert("❌ Password is required.");
 
         quizPasscode.focus();
 
@@ -188,9 +188,9 @@ function validatePasscode() {
 
     }
 
-    if (value.length < 4) {
+    if (value.length < 8) {
 
-        alert("❌ Quiz Passcode should contain at least 4 characters.");
+        alert("❌ Password should contain at least 8 characters.");
 
         quizPasscode.focus();
 
@@ -233,7 +233,7 @@ form.addEventListener("submit", async (e) => {
 
             phone: phone.value.trim(),
 
-            quizPasscode: quizPasscode.value.trim(),
+            password: quizPasscode.value.trim(),
 
             loginDate: new Date().toLocaleDateString(),
 
